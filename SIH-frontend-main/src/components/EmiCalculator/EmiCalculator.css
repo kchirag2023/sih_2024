@@ -1,0 +1,7 @@
+input[type=range] {
+    width: 85%;
+  }
+
+.loan-amount-input,.interest-rate-input,.loan-tenure-input{
+  width: 50%;
+}  

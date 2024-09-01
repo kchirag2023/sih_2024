@@ -1,0 +1,233 @@
+.navbar{
+  max-width: 100%;
+  /* height: 12%; */
+  /* margin-bottom: 10px; */
+
+}
+.company-logo{
+  width: 15%;
+  @media (max-width:780px) {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:start;
+  }
+}
+.navlink {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  /* display: inline-block; */
+  padding: 15px 20px;
+  position: relative;
+}
+.navlink:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.Hamburger{
+  display: none;
+}
+
+@media(max-width:870px){
+  .showNavbar{
+    transform: translateX(0);    
+   
+  }
+  .Hamburger{
+    display: block;
+    z-index: 2;
+    padding: 5px;
+    padding-right: 7%;
+    cursor: pointer;
+  }
+  .bar{
+    display: block;
+    background-color: #1e1c1c;
+    border-radius: 50px;
+    height: 2.5px;
+    width: 30px;
+    margin: 6px;
+    transition: 0.5s;
+  }
+  .barOne{
+    rotate: -225deg;
+    position: relative;
+    top: 4px;
+    transition: 0.5s ;
+  }
+  .barTwo{
+    display: none;
+  }
+  .barThree{
+    position: relative;
+    bottom: 4px;
+    rotate: 225deg;
+    transition: 0.5s;
+  } 
+}
+.navlink:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+.menu,.cal-emi{
+  @media (max-width: 870px) {
+    display: none;
+  }
+}
+.navbar{
+  @media (max-width:871px) {
+    justify-content: space-between;
+  }
+}
+
+.house-pic{
+  width: 4%;
+  display: inline;
+  margin: 10px;
+}
+.small-nav{
+  overflow-x: hidden;
+  z-index: 10;
+}
+/* ....................... emi btn ..................... */
+
+.emi-btn {
+  --primary-color: #645bff;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 0.5em 1em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-size: 0.9rem;
+}
+
+.emi-btn .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emi-btn .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.emi-btn .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.emi-btn:hover {
+  background-color: var(--hover-color);
+}
+
+.emi-btn:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.emi-btn:hover .arrow:before {
+  right: 0;
+}
+
+/* ---------------------hamburger------------------------ */
+
+
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+  margin: 10px;
+  @media (max-width:870px) {
+      display: block;
+  }
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+

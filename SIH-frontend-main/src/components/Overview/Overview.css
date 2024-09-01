@@ -1,0 +1,23 @@
+.overview,.type-of-loan,.eligibility,.tips{
+    width: 95%;
+    margin: auto;
+    padding: 20px;
+    
+}
+.overview-title,.type-of-loan-title,.eligibility-title,.tips-title{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-weight: 700;
+    color: rgb(27, 62, 237);
+    font-size: larger;
+}
+
+.overview-title::after,.type-of-loan-title::after,.eligibility-title::after,.tips-title::after{
+    content:"";
+    width: 10%;
+    height: 2px;
+    background-color: rgb(27, 62, 237);
+    margin-left: 20px;
+    
+}

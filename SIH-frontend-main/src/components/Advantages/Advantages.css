@@ -1,0 +1,28 @@
+.advantages{
+    width: 100%;
+    padding: 20px;
+
+}
+.advantages-title{
+    width: 92%;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: rgb(46, 46, 246);
+}
+.advantages-title::after{
+    content: "";
+    height: 2px;
+    width: 10%;
+    background-color: rgb(46, 46, 246);
+    margin-left: 10px;
+}
+
+.advantages-content{
+    width: 92%;
+    margin: auto;
+   
+}

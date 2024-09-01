@@ -1,0 +1,15 @@
+.contact{
+    width: 100%;
+    @media (max-width:870px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.contact-img{
+    width: 40%;
+    @media (max-width:870px) {
+        width: 80%;
+    }
+}
